@@ -1,0 +1,15 @@
+version: '3'
+services:
+  nodeAPI:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:8000
+    environment:
+      - DB_HOST=mysql
+      - DB_USER=root
+      - DB_PASSWORD=coderyxy
+      - DB_NAME=coderhub
+    volumes:
+      - .:/app
