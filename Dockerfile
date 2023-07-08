@@ -7,6 +7,7 @@ WORKDIR /app
 # 复制文件（Copy Files）：使用COPY指令将本地文件复制到容器中的指定位置。
 COPY package*.json ./
 # 安装依赖（Install Dependencies）：使用RUN指令执行命令，通常用于安装应用程序的依赖项。
+RUN npm install nodemon -g
 RUN npm install
 
 COPY . .
